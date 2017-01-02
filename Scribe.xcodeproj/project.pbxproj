@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		89931CFD1E1A4111000A6DA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89931CFC1E1A4111000A6DA9 /* AppDelegate.swift */; };
-		89931CFF1E1A4111000A6DA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89931CFE1E1A4111000A6DA9 /* ViewController.swift */; };
+		89931CFF1E1A4111000A6DA9 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89931CFE1E1A4111000A6DA9 /* MainVC.swift */; };
 		89931D021E1A4111000A6DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89931D001E1A4111000A6DA9 /* Main.storyboard */; };
 		89931D041E1A4111000A6DA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89931D031E1A4111000A6DA9 /* Assets.xcassets */; };
 		89931D071E1A4111000A6DA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89931D051E1A4111000A6DA9 /* LaunchScreen.storyboard */; };
+		89931D0F1E1A417D000A6DA9 /* test.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 89931D0E1E1A417D000A6DA9 /* test.m4a */; };
+		89931D1B1E1A44EC000A6DA9 /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89931D1A1E1A44EC000A6DA9 /* DropShadow.swift */; };
+		89931D1F1E1A4854000A6DA9 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89931D1E1E1A4854000A6DA9 /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		89931CF91E1A4111000A6DA9 /* Scribe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scribe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89931CFC1E1A4111000A6DA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		89931CFE1E1A4111000A6DA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		89931CFE1E1A4111000A6DA9 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		89931D011E1A4111000A6DA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89931D031E1A4111000A6DA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89931D061E1A4111000A6DA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89931D081E1A4111000A6DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89931D0E1E1A417D000A6DA9 /* test.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.m4a; sourceTree = "<group>"; };
+		89931D1A1E1A44EC000A6DA9 /* DropShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
+		89931D1E1E1A4854000A6DA9 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,65 @@
 		89931CFB1E1A4111000A6DA9 /* Scribe */ = {
 			isa = PBXGroup;
 			children = (
-				89931CFC1E1A4111000A6DA9 /* AppDelegate.swift */,
-				89931CFE1E1A4111000A6DA9 /* ViewController.swift */,
+				89931D121E1A4199000A6DA9 /* Model */,
+				89931D111E1A418D000A6DA9 /* View */,
+				89931D101E1A4185000A6DA9 /* Controller */,
+				89931D151E1A41B9000A6DA9 /* Protocols */,
+				89931D141E1A41A9000A6DA9 /* Extensions */,
+				89931D131E1A41A1000A6DA9 /* Resources */,
 				89931D001E1A4111000A6DA9 /* Main.storyboard */,
-				89931D031E1A4111000A6DA9 /* Assets.xcassets */,
 				89931D051E1A4111000A6DA9 /* LaunchScreen.storyboard */,
+				89931CFC1E1A4111000A6DA9 /* AppDelegate.swift */,
 				89931D081E1A4111000A6DA9 /* Info.plist */,
 			);
 			path = Scribe;
+			sourceTree = "<group>";
+		};
+		89931D101E1A4185000A6DA9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89931CFE1E1A4111000A6DA9 /* MainVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		89931D111E1A418D000A6DA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89931D1E1E1A4854000A6DA9 /* RoundedButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		89931D121E1A4199000A6DA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		89931D131E1A41A1000A6DA9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				89931D031E1A4111000A6DA9 /* Assets.xcassets */,
+				89931D0E1E1A417D000A6DA9 /* test.m4a */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		89931D141E1A41A9000A6DA9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				89931D1A1E1A44EC000A6DA9 /* DropShadow.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		89931D151E1A41B9000A6DA9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89931D0F1E1A417D000A6DA9 /* test.m4a in Resources */,
 				89931D071E1A4111000A6DA9 /* LaunchScreen.storyboard in Resources */,
 				89931D041E1A4111000A6DA9 /* Assets.xcassets in Resources */,
 				89931D021E1A4111000A6DA9 /* Main.storyboard in Resources */,
@@ -136,8 +194,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89931CFF1E1A4111000A6DA9 /* ViewController.swift in Sources */,
+				89931CFF1E1A4111000A6DA9 /* MainVC.swift in Sources */,
+				89931D1B1E1A44EC000A6DA9 /* DropShadow.swift in Sources */,
 				89931CFD1E1A4111000A6DA9 /* AppDelegate.swift in Sources */,
+				89931D1F1E1A4854000A6DA9 /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

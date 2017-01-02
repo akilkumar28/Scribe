@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,80 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Za7-M6-9Ow">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scribe" translatesAutoresizingMaskIntoConstraints="NO" id="vVN-QG-SmF">
+                                        <rect key="frame" x="133" y="25" width="108" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="108" id="9nb-NI-8SH"/>
+                                            <constraint firstAttribute="height" constant="47" id="Mfj-gc-5FR"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="dZC-A0-8ow"/>
+                                    <constraint firstItem="vVN-QG-SmF" firstAttribute="centerX" secondItem="Za7-M6-9Ow" secondAttribute="centerX" id="jCQ-vE-B1d"/>
+                                    <constraint firstAttribute="bottom" secondItem="vVN-QG-SmF" secondAttribute="bottom" constant="8" id="nZp-Da-RBK"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Press the Red Button to Start!" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="hyU-U2-e8o">
+                                <rect key="frame" x="16" y="88" width="343" height="446"/>
+                                <color key="backgroundColor" red="0.96242465101522845" green="0.96242465101522845" blue="0.96242465101522845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXc-0B-b5Z" customClass="RoundedButton" customModule="Scribe" customModuleProvider="target">
+                                <rect key="frame" x="157.5" y="587" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="02P-83-eS8"/>
+                                    <constraint firstAttribute="height" constant="60" id="FF5-fk-4NY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnPressd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fd4-60-QZ3"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="SiX-2B-8Tv">
+                                <rect key="frame" x="169" y="599" width="37" height="37"/>
+                                <color key="color" red="0.99958563137463163" green="1" blue="0.98790501232180439" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OXc-0B-b5Z" secondAttribute="bottom" constant="20" id="0sz-mf-dwf"/>
+                            <constraint firstItem="hyU-U2-e8o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6v4-bb-dX2"/>
+                            <constraint firstItem="Za7-M6-9Ow" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Djj-Bj-WTt"/>
+                            <constraint firstItem="SiX-2B-8Tv" firstAttribute="centerX" secondItem="OXc-0B-b5Z" secondAttribute="centerX" id="E35-Hu-1gD"/>
+                            <constraint firstItem="hyU-U2-e8o" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TKK-1k-9fC"/>
+                            <constraint firstItem="OXc-0B-b5Z" firstAttribute="top" secondItem="hyU-U2-e8o" secondAttribute="bottom" constant="53" id="UGX-nh-9ki"/>
+                            <constraint firstItem="hyU-U2-e8o" firstAttribute="top" secondItem="Za7-M6-9Ow" secondAttribute="bottom" constant="8" id="V80-1X-5zV"/>
+                            <constraint firstItem="SiX-2B-8Tv" firstAttribute="centerY" secondItem="OXc-0B-b5Z" secondAttribute="centerY" id="aS3-oY-9Bv"/>
+                            <constraint firstItem="Za7-M6-9Ow" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hG2-PJ-Q9I"/>
+                            <constraint firstAttribute="trailing" secondItem="Za7-M6-9Ow" secondAttribute="trailing" id="pcd-6o-hDe"/>
+                            <constraint firstItem="OXc-0B-b5Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uSU-84-k2x"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activitySpinner" destination="SiX-2B-8Tv" id="PQ3-yX-3fV"/>
+                        <outlet property="headerView" destination="Za7-M6-9Ow" id="dQG-tC-N3G"/>
+                        <outlet property="redbtn" destination="OXc-0B-b5Z" id="ag4-5p-bbH"/>
+                        <outlet property="textFld" destination="hyU-U2-e8o" id="9FE-AL-xvx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-5.5999999999999996" y="43.628185907046479"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Scribe" width="217" height="102"/>
+    </resources>
 </document>
